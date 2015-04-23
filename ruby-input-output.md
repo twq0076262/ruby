@@ -118,10 +118,11 @@ _print_ 语句与 _puts_ 语句类似。唯一的不同在于 _puts_ 语句在�
 下表列出了打开文件的不同模式：
 
 
-</p> <table > <tr><th>模式</th><th>描述</th></tr> <tr><td>r</td><td>只读模式。文件指针被放置在文件的开头。这是默认模式。</td></tr> <tr><td>r+</td><td>读写模式。文件指针被放置在文件的开头。</td></tr> <tr><td>w</td><td>只写模式。如果文件存在，则重写文件。如果文件不存在，则创建一个新文件用于写入。</td></tr> <tr><td>w+</td><td>读写模式。如果文件存在，则重写已存在的文件。如果文件不存在，则创建一个新文件用于读写。</td></tr> <tr><td>a</td><td>只写模式。如果文件存在，则文件指针被放置在文件的末尾。也就是说，文件是追加模式。如果文件不存在，则创建一个新文件用于写入。</td></tr> <tr><td>a+</td><td>读写模式。如果文件存在，则文件指针被放置在文件的末尾。也就是说，文件是追加模式。如果文件不存在，则创建一个新文件用于读写。</td></tr> </table> <br /> <h2 >读取和写入文件</h2> <p>用于简单 I/O 的方法也可用于所有 file 对象。所以，gets 从标准输入读取一行，<i>aFile.gets</i> 从文件对象 aFile 读取一行。</p> <p>但是，I/O 对象提供了访问方法的附加设置，为我们提供了便利。</p> <h2><i>sysread</i> 方法</h2> <p>您可以使用方法 <i>sysread</i> 来读取文件的内容。当使用方法 sysread 时，您可以使用任意一种模式打开文件。例如：</p> <p>下面是输入文本文件：</p> <pre> This is a simple text file for testing purpose. </pre> <p>现在让我们尝试读取这个文件：</p> <pre> #!/usr/bin/ruby aFile = File.new("input.txt", "r") if aFile content = aFile.sysread(20) puts content else puts "Unable to open file!" end </pre> <p>该语句将输入文件的头 20 个字符。文件指针将被放置在文件中第 21 个字符的位置。</p> <h2><i>syswrite</i> 方法</h2> <p>您可以使用方法 <i>syswrite</i> 来向文件写入内容。当使用方法 syswrite 时，您需要以写入模式打开文件。例如：</p> <pre> #!/usr/bin/ruby aFile = File.new("input.txt", "r+") if aFile aFile.syswrite("ABCDEF") else puts "Unable to open file!" end </pre> <p>该语句将写入 "ABCDEF" 到文件中。</p> <h2><i>each_byte</i> 方法</h2> <p>该方法属于类 <i>File</i>。方法 <i>each_byte</i> 是个可以迭代字符串中每个字符。请看下面的代码实例：</p> <pre> #!/usr/bin/ruby aFile = File.new("input.txt", "r+") if aFile aFile.syswrite("ABCDEF") aFile.rewind aFile.each_byte {|ch| putc ch; putc ?. } else puts "Unable to open file!" end </pre> <p>字符一个接着一个被传到变量 ch，然后显示在屏幕上，如下所示：</p> <pre> A.B.C.D.E.F.s. .a. .s.i.m.p.l.e. .t.e.x.t. .f.i.l.e. .f.o.r. .t.e.s.t.i.n.g. .p.u.r.p.o.s.e... </pre> 
+</p> <table > <tr><th>模式</th><th>描述</th></tr> <tr><td>r</td><td>只读模式。文件指针被放置在文件的开头。这是默认模式。</td></tr> <tr><td>r+</td><td>读写模式。文件指针被放置在文件的开头。</td></tr> <tr><td>w</td><td>只写模式。如果文件存在，则重写文件。如果文件不存在，则创建一个新文件用于写入。</td></tr> <tr><td>w+</td><td>读写模式。如果文件存在，则重写已存在的文件。如果文件不存在，则创建一个新文件用于读写。</td></tr> <tr><td>a</td><td>只写模式。如果文件存在，则文件指针被放置在文件的末尾。也就是说，文件是追加模式。如果文件不存在，则创建一个新文件用于写入。</td></tr> <tr><td>a+</td><td>读写模式。如果文件存在，则文件指针被放置在文件的末尾。也就是说，文件是追加模式。如果文件不存在，则创建一个新文件用于读写。</td></tr> </table> <br /> 
 
 
 ## 读取和写入文件
+
 用于简单 I/O 的方法也可用于所有 file 对象。所以，gets 从标准输入读取一行，_aFile.gets_ 从文件对象 aFile 读取一行。
 
 但是，I/O 对象提供了访问方法的附加设置，为我们提供了便利。
@@ -140,7 +141,7 @@ _print_ 语句与 _puts_ 语句类似。唯一的不同在于 _puts_ 语句在�
 
 ```
     #!/usr/bin/ruby
-
+    
     aFile = File.new("input.txt", "r")
     if aFile
        content = aFile.sysread(20)
@@ -188,7 +189,8 @@ _print_ 语句与 _puts_ 语句类似。唯一的不同在于 _puts_ 语句在�
 
 字符一个接着一个被传到变量 ch，然后显示在屏幕上，如下所示：
 
-```    
+
+```
 A.B.C.D.E.F.s. .a. .s.i.m.p.l.e. .t.e.x.t. .f.i.l.e. .f.o.r. .t.e.s.t.i.n.g. .p.u.r.p.o.s.e...
 ```
 
@@ -397,6 +399,8 @@ _Dir.delete_ 可用于删除目录。_Dir.unlink_ 和 _Dir.rmdir_ 执行同样�
 ```
     Dir.delete("testdir")
 ```
+
+## 创建文件 & 临时目录
 
 临时文件是那些在程序执行过程中被简单地创建，但不会永久性存储的信息。
 
