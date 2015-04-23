@@ -2,6 +2,7 @@
 
 Ruby 中的循环用于执行相同的代码块若干次。本章节将详细介绍 Ruby 支持的所有循环语句。
 
+## Ruby while 语句
 ### 语法
 
 ```
@@ -35,7 +36,7 @@ Ruby 中的循环用于执行相同的代码块若干次。本章节将详细介
     Inside the loop i = 3
     Inside the loop i = 4
 ```
-
+## Ruby while 修饰符
 ### 语法
 
 ```
@@ -74,6 +75,9 @@ Ruby 中的循环用于执行相同的代码块若干次。本章节将详细介
     Inside the loop i = 3
     Inside the loop i = 4
 
+## Ruby until 语句
+
+```
     until conditional [do]
        code
     end
@@ -106,6 +110,7 @@ Ruby 中的循环用于执行相同的代码块若干次。本章节将详细介
     Inside the loop i = 5
 ```
 
+## Ruby until 修饰符
 ### 语法
 
 ```
@@ -146,6 +151,7 @@ Ruby 中的循环用于执行相同的代码块若干次。本章节将详细介
     Inside the loop i = 5
 ```
 
+## Ruby for 语句
 ### 语法
 
 ```
@@ -206,6 +212,7 @@ _for...in_ 循环几乎是完全等价于：
     Value of local variable is 5
 ```
 
+## Ruby break 语句
 ### 语法
 
 ```
@@ -235,6 +242,7 @@ _for...in_ 循环几乎是完全等价于：
     Value of local variable is 2
 ```
 
+## Ruby next 语句
 ### 语法
 
 ```
@@ -265,6 +273,7 @@ _for...in_ 循环几乎是完全等价于：
     Value of local variable is 5
 ```
 
+## Ruby redo 语句
 ### 语法
 
 ```
@@ -294,6 +303,7 @@ _for...in_ 循环几乎是完全等价于：
     ............................
 ```
 
+## Ruby retry 语句
 ### 语法
 
 ```
