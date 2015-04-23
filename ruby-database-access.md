@@ -519,13 +519,6 @@ DBD::Mysql 实现了下列特定驱动程序的函数：
 |11   |dbh.func(:stat) => Stringb>：返回数据库的当前状态。|
 |12   |dbh.func(:thread_id) => Fixnum：返回当前线程的 ID。|
 
-
-
-8	dbh.func(:host_info) => String:返回主机信息。
-9	dbh.func(:proto_info) => Fixnum:返回用于通信的协议。
-10	dbh.func(:server_info) => String :根据版本返回 MySQL 服务器端信息。
-11	dbh.func(:stat) => Stringb>:返回数据库的当前状态。
-12	dbh.func(:thread_id) => Fixnum:返回当前线程的 ID。
 ## 实例
 
 ```
