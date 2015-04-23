@@ -282,7 +282,7 @@ $ ruby setup.rb install
     Salary :2300
 ```
 
-### 还有很多从数据库获取记录的方法，如果您感兴趣，可以查看 [**Ruby DBI Read 操作**](ruby-database-access.md)。
+##### 还有很多从数据库获取记录的方法，如果您感兴趣，可以查看 [**Ruby DBI Read 操作**](ruby-database-access.md)。
 
 
 ## Update 操作
@@ -504,20 +504,20 @@ DBI 让数据库驱动程序提供了额外的特定数据库的函数，这些�
 DBD::Mysql 实现了下列特定驱动程序的函数：
 
 
-| 序号| 函数 & 描述 |
-|----|------------------------------------------------------------|
-| 1  | dbh.func(:createdb, db_name): 创建一个新的数据库。             |
-| 2  | dbh.func(:dropdb, db_name): 删除一个数据库。                  |
-| 3  | dbh.func(:reload): 执行重新加载操作。                         |
-| 4  | dbh.func(:shutdown): 关闭服务器。                            |
-| 5  | dbh.func(:insert_id) => Fixnum: 返回该连接的最近 AUTO_INCREMENT 值。|
-| 6  | dbh.func(:client_info) => String: 根据版本返回 MySQL 客户端信息|
-| 7  | dbh.func(:client_version) => Fixnum : 根据版本返回客户端信息。这与 :client_info 类似，但是它会返回一个 fixnum，而不是返回字符串。       |
-| 8  | dbh.func(:host_info) => String: 返回主机信息。               |
-| 9  | dbh.func(:proto_info) => Fixnum: 返回用于通信的协议。         |     
-| 10  | dbh.func(:server_info) => String : 根据版本返回 MySQL 服务器端信息。|
-| 11  | dbh.func(:stat) => Stringb>: 返回数据库的当前状态。          |
-| 12  | dbh.func(:thread_id) => Fixnum: 返回当前线程的 ID。         |
+| 序号 | 函数 & 描述    |
+| --- |:-------------:|
+|1    |dbh.func(:createdb, db_name)：创建一个新的数据库。|
+|2    |dbh.func(:dropdb, db_name)：删除一个数据库。|
+|3    |dbh.func(:reload)：执行重新加载操作。|
+|4    |dbh.func(:shutdown)：关闭服务器。|
+|5    |dbh.func(:insert_id) => Fixnum：返回该连接的最近 AUTO_INCREMENT 值。|
+|6    |dbh.func(:client_info) => String：根据版本返回 MySQL 客户端信息。|
+|7    |dbh.func(:client_version) => Fixnum ：根据版本返回客户端信息。这与 :client_info 类似，但是它会返回一个 fixnum，而不是返回字符串。|
+|8    |dbh.func(:host_info) => String：返回主机信息。|
+|9    |dbh.func(:proto_info) => Fixnum：返回用于通信的协议。|
+|10   |dbh.func(:server_info) => String ：根据版本返回 MySQL 服务器端信息。|
+|11   |dbh.func(:stat) => Stringb>：返回数据库的当前状态。|
+|12   |dbh.func(:thread_id) => Fixnum：返回当前线程的 ID。|
 
 
 
