@@ -312,7 +312,15 @@ complete
 
 以下实例调用了线程实例化方法 join：
 
-<pre> #!/usr/bin/ruby thr = Thread.new do # 实例化 puts "In second thread" raise "Raise exception" end thr.join # 调用实例化方法 join </pre>
+```
+#!/usr/bin/ruby
+
+thr = Thread.new do   # 实例化
+   puts "In second thread"
+   raise "Raise exception"
+end
+thr.join   # 调用实例化方法 join
+```
 
 以下是完整实例化方法列表：
 
