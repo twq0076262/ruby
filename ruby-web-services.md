@@ -268,21 +268,21 @@ SOAP::RPC::Driver.new(endPoint, nameSpace, soapAction)
 </tr>
 
 <tr>
-<td>**endPoint**</td>
+<td>endPoint</td>
 
 <td>连接 SOAP 服务的 URL 地址</td>
 
 </tr>
 
 <tr>
-<td>**nameSpace**</td>
+<td>nameSpace</td>
 
 <td>命名空间用于 SOAP::RPC::Driver 对象的所有 RPC .</td>
 
 </tr>
 
 <tr>
-<td>**soapAction**</td>
+<td>soapAction</td>
 
 <td>用于 HTTP 头部的 SOAPAction 字段值。如果是字符串是"" 则默认为 _nil_</td>
 
@@ -312,14 +312,14 @@ driver.add_method(name, *paramArg)
 </tr>
 
 <tr>
-<td>**name**</td>
+<td>name</td>
 
 <td>远程web服务的方法名</td>
 
 </tr>
 
 <tr>
-<td>**paramArg**</td>
+<td>paramArg</td>
 
 <td>指定远程程序的参数</td>
 
