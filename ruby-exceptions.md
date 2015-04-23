@@ -6,6 +6,8 @@
 
 Ruby 提供了一个完美的处理异常的机制。我们可以在 _begin/end_ 块中附上可能抛出异常的代码，并使用 _rescue_ 子句告诉 Ruby 完美要处理的异常类型。
 
+## 语法
+
 ```
     begin
     # -
@@ -26,6 +28,8 @@ Ruby 提供了一个完美的处理异常的机制。我们可以在 _begin/end_
 
 如果异常不匹配所有指定的错误类型，我们可以在所有的 _rescue_ 子句后使用一个 _else_ 子句。
 
+## 实例
+
 ```
     #!/usr/bin/ruby
 
@@ -43,8 +47,10 @@ Ruby 提供了一个完美的处理异常的机制。我们可以在 _begin/end_
 这将产生以下结果。您可以看到，_STDIN_ 取代了 _file_ ，因为_打开_失败。
 
 ```
-    #==#
+   #<IO:0xb7d16f84>==#<IO:0xb7d16f84>
 ```
+
+## 使用 retry 语句
 
 您可以使用 _rescue_ 块捕获异常，然后使用 _retry_ 语句从开头开始执行 _begin_ 块。
 
@@ -57,42 +63,6 @@ Ruby 提供了一个完美的处理异常的机制。我们可以在 _begin/end_
         # 这个块将捕获所有类型的异常
         retry  # 这将把控制移到 begin 的开头
     end
-```
-
-## 实例
-
-```
-#!/usr/bin/ruby
-
-begin
-   file = open("/unexistant_file")
-   if file
-      puts "File opened successfully"
-   end
-rescue
-      file = STDIN
-end
-print file, "==", STDIN, "\n"
-```
-
-这将产生以下结果。您可以看到，STDIN 取代了 file ，因为打开失败。
-
-```
-#<IO:0xb7d16f84>==#<IO:0xb7d16f84>
-```
-
-## 使用 retry 语句
-您可以使用 rescue 块捕获异常，然后使用 retry 语句从开头开始执行 begin 块。
-
-## 语法
-
-```
-begin
-    # 这段代码抛出的异常将被下面的 rescue 子句捕获
-rescue
-    # 这个块将捕获所有类型的异常
-    retry  # 这将把控制移到 begin 的开头
-end
 ```
 
 ## 实例
