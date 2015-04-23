@@ -105,7 +105,7 @@ Line1 contains Cats
 
 ## 圆括号的特殊语法
 
-<table > <tr><th style="width:25%">实例</th><th>描述</th></tr> <tr><td>/R(?#comment)/ </td><td>匹配 "R"。所有剩余的字符都是注释。</td></tr> <tr><td>/R(?i)uby/ </td><td>当匹配 "uby" 时不区分大小写。</td></tr> <tr><td>/R(?i:uby)/ </td><td>与上面相同。</td></tr> <tr><td>/rub(?:y|le))/</td><td>只分组，不进行 \1 反向引用</td></tr> </table> <br /> 
+<table > <tr><th style="width:25%">实例</th><th>描述</th></tr> <tr><td>/R(?#comment)/ </td><td>匹配 "R"。所有剩余的字符都是注释。</td></tr> <tr><td>/R(?i)uby/ </td><td>当匹配 "uby" 时不区分大小写。</td></tr> <tr><td>/R(?i:uby)/ </td><td>与上面相同。</td></tr> <tr><td>/rub(?:y|le))/</td><td>只分组，不进行 \1 反向引用</td></tr> </table>
 
 ## 搜索和替换
 
