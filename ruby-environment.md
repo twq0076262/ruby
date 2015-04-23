@@ -4,7 +4,7 @@
 
 如果您想要设置 Ruby 编程语言的环境，请阅读本章节的内容。本章将向您讲解与环境设置有关的所有重要的主题。建议先学习下面几个主题，然后再进一步深入学习其他主题：
 
-*   [Linux/Unix 上的 Ruby 安装](ruby-installation-unix)：如果您想要在 Linux/Unix 上配置开发环境，那么请查看本章节的内容。
+*   [Linux/Unix 上的 Ruby 安装](ruby-installation-unix.md)：如果您想要在 Linux/Unix 上配置开发环境，那么请查看本章节的内容。
 
 *   [Windows 上的 Ruby 安装](ruby-installation-windows.md)：如果您想要在 Windows 上配置开发环境，那么请查看本章节的内容。
 
