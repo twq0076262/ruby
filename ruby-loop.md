@@ -74,6 +74,7 @@ Ruby 中的循环用于执行相同的代码块若干次。本章节将详细介
     Inside the loop i = 2
     Inside the loop i = 3
     Inside the loop i = 4
+```
 
 ## Ruby until 语句
 
